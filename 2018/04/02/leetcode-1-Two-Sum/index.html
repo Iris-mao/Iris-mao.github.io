@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="####Description:Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not">
+<meta name="description" content="##Description:Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not u">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode - 1. Two Sum">
 <meta property="og:url" content="http://yoursite.com/2018/04/02/leetcode-1-Two-Sum/index.html">
 <meta property="og:site_name" content="Iris-mao">
-<meta property="og:description" content="####Description:Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not">
+<meta property="og:description" content="##Description:Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not u">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-02T08:43:28.500Z">
+<meta property="og:updated_time" content="2018-04-02T08:46:24.244Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode - 1. Two Sum">
-<meta name="twitter:description" content="####Description:Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not">
+<meta name="twitter:description" content="##Description:Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not u">
 
 
 
@@ -352,16 +352,17 @@
       
 
       
-        <p>####Description:<br>Given an array of integers, return indices of the two numbers such that they add up to a specific target.<br>You may assume that each input would have exactly one solution, and you may not use the same element twice.<br><--more--></--more--></p>
-<p>####Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [2, 7, 11, 15], target = 9,</span><br><span class="line"></span><br><span class="line">Because nums[0] + nums[1] = 2 + 7 = 9,</span><br><span class="line">return [0, 1].</span><br></pre></td></tr></table></figure></p>
-<p>####Ideas</p>
+        <p>##Description:<br>Given an array of integers, return indices of the two numbers such that they add up to a specific target.<br>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p><-- more="" --=""></--></p>
+<p>##Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [2, 7, 11, 15], target = 9,</span><br><span class="line"></span><br><span class="line">Because nums[0] + nums[1] = 2 + 7 = 9,</span><br><span class="line">return [0, 1].</span><br></pre></td></tr></table></figure></p>
+<p>##Ideas</p>
 <ul>
 <li>1、获取数组中的第一个元素</li>
 <li>2、找到除这个元素之外的其他元素，让它们相加，跟target进行对比</li>
 <li>3、如果和target相等，就返回两个元素所在的index</li>
 <li>4、重复1-3的步骤</li>
 </ul>
-<p>####Code<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var twoSum = function(nums, target) &#123;</span><br><span class="line">    var result = [];</span><br><span class="line">    for(var i = 0; i&lt;nums.length; i++)&#123;</span><br><span class="line">        for(var j = i+1 ; j&lt;nums.length; j++)&#123;</span><br><span class="line">            if(nums[i] + nums[j] == target)&#123;</span><br><span class="line">                result.push(i,j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>##Code<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var twoSum = <span class="keyword">function</span>(nums, target) &#123;</span><br><span class="line">    var result = [];</span><br><span class="line">    <span class="keyword">for</span>(var i = 0; i&lt;nums.length; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(var j = i+1 ; j&lt;nums.length; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] + nums[j] == target)&#123;</span><br><span class="line">                result.push(i,j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
